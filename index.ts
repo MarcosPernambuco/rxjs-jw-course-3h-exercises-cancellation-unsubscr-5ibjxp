@@ -4,9 +4,9 @@ const interval$ = new Observable<number>((subscriber) => {
   let counter = 1;
 
   const intervalId = setInterval(() => {
-    console.log('Emitted', counter);
+    console.log('Emitted: ', counter);
     subscriber.next(counter++);
-  }, 2000);
+  }, 3000);
 
   return () => {
     clearInterval(intervalId);
